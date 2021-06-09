@@ -85,6 +85,7 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git checkout tagname                             // 切换tag</span><br></pre></td></tr></table></figure>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git tag -d tagname                               // 删除tag</span><br></pre></td></tr></table></figure>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git push origin :refs/tags/&lt;tagname&gt;             // 删除远程tag</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">$ git stash save <span class="string">&quot;save massage&quot;</span>                    // 执行存储,添加备注,只有git stash也可以</span><br><span class="line">$ git stash list                                   // 查看stash了哪些存储</span><br><span class="line">$ git stash show                                   // 显示做了哪些改动， 默认显示第一个, 如果需要显示其他存储，后面加stash@&#123;<span class="variable">$num</span>&#125;, egg: git stash show stash@&#123;1&#125;</span><br><span class="line">$ git stash show -p                                // 查看存储改动内容， 默认显示第一个，如果需要显示其他存储，中间加stash@&#123;<span class="variable">$num</span>&#125;, egg: git stash show stash@&#123;1&#125; -p</span><br><span class="line">$ git stash apply                                  // 应用某个存储， 但是不会从列表中删除，默认第一个， 如果需要显示其他存储，后面加stash@&#123;<span class="variable">$num</span>&#125;, egg: git stash apply stash@&#123;1&#125;</span><br><span class="line">$ git stash pop                                    // 回复支持缓存的工资目录， 并删除， 将修改应用到当前目录下，默认第一个，其他同上</span><br><span class="line">$ git stash drop                                   // 丢弃存储， 默认第一个，其他同上</span><br><span class="line">$ git stash clear                                  // 删除所有缓存的stash</span><br><span class="line"></span><br><span class="line">* 注意：新增的文件无法stash，需要git add添加进版本库后才能保存到stash</span><br></pre></td></tr></table></figure>
         <p class="suffix-end">__END__</p>
         <div class="suffix-box">
             <div class="suffix-box-left">
@@ -123,6 +124,9 @@
             </div>
         
         <div class="article-prev-next">
+            
+                <a href="/2021/06/09/git-lfs/" class="prev-prefix">« </a> 上一篇：    <a href="/2021/06/09/git-lfs/" title="发布于 2021-06-09 10:40">Git大文件上传</a>
+                <br>
             
             
                 <a href="/2021/06/03/hello-world/" class="next-prefix">» </a> 下一篇：    <a href="/2021/06/03/hello-world/" title="发布于 2021-06-03 03:18">Hello World</a>
