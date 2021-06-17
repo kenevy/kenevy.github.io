@@ -6,7 +6,7 @@
     <meta name="referrer" content="origin">
     <meta http-equiv="Cache-Control" content="no-transform">
     <meta http-equiv="Cache-Control" content="no-siteapp">
-    <title>分类 - 工具</title>
+    <title>Windows下gcc/g++的安装与配置</title>
 
     <link type="text/css" rel="stylesheet" href="https://www.chengzi.run/blog_hexo_static/font/LongCang.css">
     <link type="text/css" rel="stylesheet" href="https://www.chengzi.run/blog_hexo_static/font/Monda.css">
@@ -17,111 +17,114 @@
     <link type="text/css" rel="stylesheet" href="https://www.chengzi.run/blog_hexo_static/font/Rosario.css">
     <link type="text/css" rel="stylesheet" href="https://www.chengzi.run/blog_hexo_static/font/UbuntuMono.css">
 
-    <link type="text/css" rel="stylesheet" href="https://www.chengzi.run/blog_hexo_static/css/index.css">
+    <link type="text/css" rel="stylesheet" href="https://www.chengzi.run/blog_hexo_static/css/post.css">
+    
+        <link type="text/css" rel="stylesheet" href="https://www.chengzi.run/blog_hexo_static/css/normal.css">
+    
 
     <script type="text/javascript" src="https://www.chengzi.run/blog_hexo_static/js/jquery-3.4.1.min.js"></script>
+
 <meta name="generator" content="Hexo 5.4.0"></head>
 <body>
     <a id="cover"></a>
     <div id="header">
-    <div class="header" >
+    <div class="header">
         <div class="vertical">
             <div class="inner">
-                <h1 class="header-title"></h1>
-                <h2 class="header-description" id="hitokoto"></h2>
-                <h3 class="header-info" id="hitokotoAuthor"></h3>
-                <!--
-                <h1 class="header-subtitle"></h1>
-                <p class="header-subinfo"></p>
-                -->
+                <h1 class="header-subtitle">Windows下gcc/g++的安装与配置</h1>
+                <div class="header-subinfo">
+                    <p class="article-info-text">
+                        <span>
+                            <i class="iconfont icon-time"></i> 发表时间：2021-06-17
+                        </span>
+                        
+                            <span id="/2021/06/17/g++/" class="leancloud_visitors" data-flag-title="Windows下gcc/g++的安装与配置">
+                                <i class="iconfont icon-browse"></i> 阅读：<sapn class="leancloud-visitors-count"></span>
+                            </span>
+                        
+                        <span>
+                            <i class="iconfont icon-interactive"></i> 评论：<span class="valine-comment-count" data-xid="/2021/06/17/g++/"></span>
+                        </span>  
+                    </p>                 
+                </div>
             </div>
         </div>
-        <a class="scroll-down" href="javascript:;" target="_self" data-offset="-45">
-            <span class="hidden">Scroll Down</span>
-            <i class="scroll-down-icon iconfont icon-return"></i>
-        </a>
+        <canvas id="articleHeaderCanvas"></canvas>
     </div>
 </div>
     <div id="container">
     <div id="content">
-        <div class="articles">
-    
-        <div class="article">
-            <div class="article-title">
-                <a href="/2021/06/17/g++/">Windows下gcc/g++的安装与配置</a>
-                
+        <div id="article">
+    <div class="toc"></div>
+    <div class="article-body">
+        <p>Windows下gcc/g++的安装与配置</p>
+<h1 id="1-下载mingw"><a href="#1-下载mingw" class="headerlink" title="1.下载mingw"></a>1.下载mingw</h1><p>打开链接： <a target="_blank" rel="noopener" href="https://osdn.net/projects/mingw/downloads/68260/mingw-get-setup.exe/">https://osdn.net/projects/mingw/downloads/68260/mingw-get-setup.exe/</a></p>
+<p>点击mingw-get-setup.ext即开始下载</p>
+<h1 id="2-安装mingw"><a href="#2-安装mingw" class="headerlink" title="2.安装mingw"></a>2.安装mingw</h1><p>下载的安装程序是一个包管理器，只有几十kb， 包管理器安装后才能继续安装编译器等组件。<br>打开程序，按照提示，以默认选项安装即可。</p>
+<p>在安装完成后的弹出页面中找到 <code>mingw32-gcc-g++</code> (注意class属性要为bin), 右键点击 <code>Mark for Installation</code><br>然后点击左上角的 Installation 菜单中的Apply changes 选项， 然后管理器将开始在线安装或更新被选中的组件。</p>
+<p>如果由于某种原因未能成功， 退出程序前会给予提示，选择review changes 重新安装即可。</p>
+<h1 id="3-配置环境变量"><a href="#3-配置环境变量" class="headerlink" title="3.配置环境变量"></a>3.配置环境变量</h1><p>打开控制面板 -&gt; 系统和安全 -&gt; 系统 -&gt; 高级系统设置 -&gt; 环境变量。</p>
+<p>在系统环境变量列表中找到 PATH 选项，打开</p>
+<p>点击新建， 找到MinGW安装路径下的bin， 添加项：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">D:\program\MinGW\bin</span><br></pre></td></tr></table></figure>
+<p>点击确定即可</p>
+<h1 id="4-检验是否安装成功"><a href="#4-检验是否安装成功" class="headerlink" title="4.检验是否安装成功"></a>4.检验是否安装成功</h1><p>打开cmd，输入<br><code>gcc -v </code>测试gcc版本<br><code>g++ -v </code>测试g++版本</p>
+
+        <p class="suffix-end">__END__</p>
+        <div class="suffix-box">
+            <div class="suffix-box-left">
+                <img src="https://avatars.githubusercontent.com/u/38529839?v=4" alt="Kenevy">
             </div>
-            <div class="article-abstract">
-                
+            <div class="suffix-box-right">
+                <span class="suffix-box-title">文章作者</span>：Kenevy
+                <br>
+                <span class="suffix-box-title">文章出处</span>：<a href="/2021/06/17/g++/" target="_blank">Windows下gcc/g++的安装与配置</a>
+                <br>
+                <span class="suffix-box-title">作者签名</span>：简单地活着, 肆意又精彩.
+                <br>
+                <span class="suffix-box-title">关于主题</span>：<a href="https://github.com/first19326/Hexo-LiveForCode" target="_blank">Hexo - Live For Code</a>
+                <br>
+                <span class="suffix-box-title">版权声明</span>：文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" title="BY-NC-SA" target="_blank">BY-NC-SA</a> 许可协议，转载请注明出处
+                <br>
             </div>
-            <div class="clear"></div>
-            <div class="article-info">
-                <span>
-                    <i class="iconfont icon-time"></i> 发表时间：2021-06-17
-                </span>
-                
-                    <span id="/2021/06/17/g++/" class="leancloud_visitors" data-flag-title="Windows下gcc/g++的安装与配置">
-                        <i class="iconfont icon-browse"></i> 阅读：<sapn class="leancloud-visitors-count"></span>
-                    </span>
-                
-                <span>
-                    <i class="iconfont icon-interactive"></i> 评论：<span class="valine-comment-count" data-xid="/2021/06/17/g++/"></span>
-                </span>
-            </div>
-            <div class="clear"></div>     
+            <div style="clear: both;"></div>
         </div>
-    
-        <div class="article">
-            <div class="article-title">
-                <a href="/2021/06/09/git-lfs/">Git大文件上传</a>
+    </div>
+    <div class="article-footer">
+        
+            <div class="category">
+                分类：
+                
+                    <a href="/categorie/%E5%B7%A5%E5%85%B7/">工具</a>
                 
             </div>
-            <div class="article-abstract">
+        
+        
+            <div class="tag">
+                标签：
+                
+                    <a href="/tag/C/">C++</a>
+                
+                    <a href="/tag/gcc/">gcc</a>
                 
             </div>
-            <div class="clear"></div>
-            <div class="article-info">
-                <span>
-                    <i class="iconfont icon-time"></i> 发表时间：2021-06-09
-                </span>
-                
-                    <span id="/2021/06/09/git-lfs/" class="leancloud_visitors" data-flag-title="Git大文件上传">
-                        <i class="iconfont icon-browse"></i> 阅读：<sapn class="leancloud-visitors-count"></span>
-                    </span>
-                
-                <span>
-                    <i class="iconfont icon-interactive"></i> 评论：<span class="valine-comment-count" data-xid="/2021/06/09/git-lfs/"></span>
-                </span>
-            </div>
-            <div class="clear"></div>     
+        
+        <div class="article-prev-next">
+            
+            
+                <a href="/2021/06/11/taro/" class="next-prefix">» </a> 下一篇：    <a href="/2021/06/11/taro/" title="发布于 2021-06-11 04:39">Taro多版本管理</a>
+            
         </div>
+    </div>
     
-        <div class="article">
-            <div class="article-title">
-                <a href="/2021/06/03/git-install-used/">Git安装及使用</a>
-                
-            </div>
-            <div class="article-abstract">
-                
-            </div>
-            <div class="clear"></div>
-            <div class="article-info">
-                <span>
-                    <i class="iconfont icon-time"></i> 发表时间：2021-06-03
-                </span>
-                
-                    <span id="/2021/06/03/git-install-used/" class="leancloud_visitors" data-flag-title="Git安装及使用">
-                        <i class="iconfont icon-browse"></i> 阅读：<sapn class="leancloud-visitors-count"></span>
-                    </span>
-                
-                <span>
-                    <i class="iconfont icon-interactive"></i> 评论：<span class="valine-comment-count" data-xid="/2021/06/03/git-install-used/"></span>
-                </span>
-            </div>
-            <div class="clear"></div>     
+    <div class="article-comments">
+        <div class="comments-title">
+            评论列表
         </div>
-    
-    
+        <div class="comments-content">
+        </div>
+    </div>
+
 </div>
 
     </div>
